@@ -87,6 +87,10 @@ void evolve(char *array, int N, int *infected){
 }
 
 int main(int argc, char *argv[]){
+    if (argc != 3) {
+        printf("Usage: ./mc <N> <alpha>\n N - population size (N x N)\n alpha - pathogen aggressiveness\n");
+        return 1;
+    }
 	int N = atoi(argv[1]);
 	alfa = atof(argv[2]);
 	int n = 1000;
